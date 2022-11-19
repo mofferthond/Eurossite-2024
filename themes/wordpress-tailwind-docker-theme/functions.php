@@ -113,3 +113,24 @@ function tailpress_nav_menu_add_submenu_class($classes, $args, $depth)
 }
 
 add_filter('nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3);
+
+/**
+ * CUSTOM
+ */
+
+/**
+ * Get Menu By Location
+ * @param   string    $theme_location    Theme location
+ * @return  mixed                        Menu Object or false if not found
+ */
+if (!function_exists('get_menu_by_location')) :
+	function get_menu_by_location($theme_location)
+	{
+		$theme_locations = get_nav_menu_locations();
+		$menu_obj = get_term($theme_locations[$theme_location], 'nav_menu');
+		if ($menu_obj)
+			return wp_get_nav_menu_items($menu_obj->term_id);
+		else
+			return $menu_obj;
+	}
+endif;
