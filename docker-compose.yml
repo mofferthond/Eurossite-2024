@@ -1,5 +1,5 @@
 version: "1.0"
-name: "Eurossite 2024"
+name: "eurossite-2024"
 
 services:
   db:
