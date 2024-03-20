@@ -1,5 +1,5 @@
-version: "3.3"
-name: "wordpress-tailwind-docker"
+version: "1.0"
+name: "Eurossite 2024"
 
 services:
   db:
