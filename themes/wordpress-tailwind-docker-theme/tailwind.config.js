@@ -18,7 +18,10 @@ module.exports = {
             },
         },
         extend: {
-            colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
+            colors: {
+                primary: '#2e5625',
+                text: '#333333',
+            },
             fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme))
         },
         screens: {
