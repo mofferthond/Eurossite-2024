@@ -3,3 +3,7 @@
 @import "tailwindcss/utilities";
 
 @import "custom.css";
+
+.wp-element-button {
+    @apply bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600;
+}
